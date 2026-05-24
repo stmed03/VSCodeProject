@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import { Button } from 'antd';
+import { Button, Card, Space, Typography } from 'antd';
+
+const { Title, Paragraph } = Typography;
 
 export default function DocsPage() {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,46 +10,64 @@ export default function DocsPage() {
     'https://avatars.mds.yandex.net/i?id=52349952fe6c44074f5a8a7d618b4618_l-6371016-images-thumbs&n=13';
 
   return (
-    <div>
-      <h1>О программе</h1>
+    <div style={{ maxWidth: 980 }}>
+      <Card
+        style={{
+          borderRadius: 20,
+          border: 'none',
+          boxShadow: '0 10px 30px rgba(15, 23, 42, 0.08)',
+        }}
+        bodyStyle={{ padding: 32 }}
+      >
+        <Space direction="vertical" size={16} style={{ width: '100%' }}>
+          <Title level={2} style={{ margin: 0 }}>
+            О программе
+          </Title>
 
-      <p style={{ marginBottom: 16 }}>
-        Нажми кнопку ниже, чтобы открыть фото.
-      </p>
+          
 
-      <Button type="primary" onClick={() => setIsOpen(true)}>
-        Показать фото
-      </Button>
+          <Button type="primary" size="large" onClick={() => setIsOpen(true)}>
+            Показать фото
+          </Button>
+        </Space>
+      </Card>
 
       {isOpen && (
         <div
           style={{
             position: 'fixed',
             inset: 0,
-            background: 'rgba(0, 0, 0, 0.45)',
+            background: 'rgba(15, 23, 42, 0.55)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             zIndex: 3000,
             padding: 16,
+            backdropFilter: 'blur(4px)',
           }}
         >
           <div
             style={{
               width: '100%',
-              maxWidth: 520,
+              maxWidth: 560,
               background: '#fff',
-              borderRadius: 12,
+              borderRadius: 20,
               padding: 24,
-              boxShadow: '0 12px 40px rgba(0,0,0,0.2)',
+              boxShadow: '0 24px 80px rgba(0,0,0,0.25)',
             }}
           >
-            <h3 style={{ marginTop: 0, marginBottom: 16 }}>Фотография</h3>
+            <Title level={4} style={{ marginTop: 0 }}>
+              Фотография
+            </Title>
 
             <img
               src={imageUrl}
               alt="Фото"
-              style={{ width: '100%', display: 'block', borderRadius: 8 }}
+              style={{
+                width: '100%',
+                display: 'block',
+                borderRadius: 14,
+              }}
             />
 
             <div style={{ marginTop: 24, textAlign: 'right' }}>
