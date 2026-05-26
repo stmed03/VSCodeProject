@@ -2,6 +2,7 @@ import { defineConfig } from '@umijs/max';
 
 export default defineConfig({
   routes: [
+    { path: '/login', component: 'login', layout: false },
     { path: '/', component: 'index' },
     { path: '/docs', component: 'docs' },
     { path: '/page', component: 'page' },
@@ -9,4 +10,7 @@ export default defineConfig({
   ],
   npmClient: 'npm',
   request: {},
+  layout: {
+    title: 'Students',
+  },
 });

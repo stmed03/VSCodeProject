@@ -1,7 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import { history } from '@umijs/max';
 import {
   Button,
   Card,
+  Empty,
   Form,
   Input,
   InputNumber,
@@ -11,6 +13,7 @@ import {
   Typography,
   message,
 } from 'antd';
+import { DeleteOutlined, LogoutOutlined } from '@ant-design/icons';
 import {
   type Student,
   type StudentFormValues,
@@ -21,6 +24,7 @@ import {
 } from '@/services/student';
 
 const { Title, Text } = Typography;
+const USER_KEY = 'userName';
 
 export default function StudentsPage() {
   const [form] = Form.useForm<StudentFormValues>();
@@ -91,13 +95,22 @@ export default function StudentsPage() {
   };
 
   const handleDelete = async (id: number) => {
-    try {
-      await deleteStudent(id);
-      message.success('Студент удалён');
-      await loadStudents(search);
-    } catch {
-      message.error('Ошибка при удалении');
-    }
+    Modal.confirm({
+      title: 'Удалить студента?',
+      content: 'Это действие нельзя отменить.',
+      okText: 'Удалить',
+      cancelText: 'Отмена',
+      okButtonProps: { danger: true },
+      onOk: async () => {
+        try {
+          await deleteStudent(id);
+          message.success('Студент удалён');
+          await loadStudents(search);
+        } catch {
+          message.error('Ошибка при удалении');
+        }
+      },
+    });
   };
 
   const handleSearch = async (value: string) => {
@@ -105,55 +118,58 @@ export default function StudentsPage() {
     await loadStudents(value);
   };
 
-  const columns = [
-    {
-      title: '№',
-      dataIndex: 'id',
-      key: 'id',
-      width: 80,
-      align: 'center' as const,
-    },
-    {
-      title: 'Имя',
-      dataIndex: 'firstName',
-      key: 'firstName',
-    },
-    {
-      title: 'Фамилия',
-      dataIndex: 'lastName',
-      key: 'lastName',
-    },
-    {
-      title: 'Возраст',
-      dataIndex: 'age',
-      key: 'age',
-      width: 110,
-      align: 'center' as const,
-    },
-    {
-      title: 'Действие',
-      key: 'actions',
-      width: 240,
-      align: 'center' as const,
-      render: (_: unknown, record: Student) => (
-        <Space>
-          <Button onClick={() => openEdit(record)}>Редактировать</Button>
-          <Button danger onClick={() => handleDelete(record.id)}>
-            Удалить
-          </Button>
-        </Space>
-      ),
-    },
-  ];
+  const logout = () => {
+    localStorage.removeItem('token');
+    localStorage.removeItem(USER_KEY);
+    history.push('/login');
+  };
+
+  const columns = useMemo(
+    () => [
+      { title: '№', dataIndex: 'id', key: 'id', width: 80, align: 'center' as const },
+      { title: 'Имя', dataIndex: 'firstName', key: 'firstName' },
+      { title: 'Фамилия', dataIndex: 'lastName', key: 'lastName' },
+      { title: 'Возраст', dataIndex: 'age', key: 'age', width: 110, align: 'center' as const },
+      {
+        title: 'Действие',
+        key: 'actions',
+        width: 240,
+        align: 'center' as const,
+        render: (_: unknown, record: Student) => (
+          <Space>
+            <Button onClick={() => openEdit(record)}>Редактировать</Button>
+            <Button danger icon={<DeleteOutlined />} onClick={() => handleDelete(record.id)}>
+              Удалить
+            </Button>
+          </Space>
+        ),
+      },
+    ],
+    [],
+  );
+
+  const isSearchActive = search.trim().length > 0;
+  const isEmptyAfterSearch = isSearchActive && students.length === 0;
 
   return (
     <div style={{ maxWidth: 1100 }}>
-      <Card style={{ borderRadius: 20, boxShadow: '0 10px 30px rgba(15, 23, 42, 0.08)' }}>
+      <Card
+        style={{ borderRadius: 20, boxShadow: '0 10px 30px rgba(15, 23, 42, 0.08)' }}
+        extra={
+          <Button icon={<LogoutOutlined />} onClick={logout}>
+            Выйти
+          </Button>
+        }
+      >
         <Space direction="vertical" size={20} style={{ width: '100%' }}>
           <div>
             <Title level={2} style={{ marginBottom: 8 }}>
               Список студентов
             </Title>
+            <Text type="secondary">
+              Авторизован как: {localStorage.getItem(USER_KEY) ?? 'неизвестно'}
+            </Text>
+            <br />
             <Text type="secondary">Количество студентов: {count}</Text>
           </div>
 
@@ -164,7 +180,9 @@ export default function StudentsPage() {
               style={{ maxWidth: 360 }}
               onSearch={handleSearch}
               onChange={(e) => {
-                if (!e.target.value) handleSearch('');
+                const value = e.target.value;
+                setSearch(value);
+                if (!value) handleSearch('');
               }}
             />
             <Button type="primary" onClick={() => setIsAddOpen(true)}>
@@ -178,6 +196,13 @@ export default function StudentsPage() {
             dataSource={students}
             rowKey="id"
             pagination={{ pageSize: 5 }}
+            locale={{
+              emptyText: isEmptyAfterSearch ? (
+                <Empty description="Ничего не найдено" />
+              ) : (
+                <Empty description="Нет студентов" />
+              ),
+            }}
           />
         </Space>
       </Card>
@@ -190,34 +215,17 @@ export default function StudentsPage() {
         destroyOnClose
       >
         <Form form={form} layout="vertical" onFinish={onAddFinish}>
-          <Form.Item
-            label="Имя"
-            name="firstName"
-            rules={[{ required: true, message: 'Введите имя' }]}
-          >
+          <Form.Item label="Имя" name="firstName" rules={[{ required: true, message: 'Введите имя' }]}>
             <Input />
           </Form.Item>
-
-          <Form.Item
-            label="Фамилия"
-            name="lastName"
-            rules={[{ required: true, message: 'Введите фамилию' }]}
-          >
+          <Form.Item label="Фамилия" name="lastName" rules={[{ required: true, message: 'Введите фамилию' }]}>
             <Input />
           </Form.Item>
-
-          <Form.Item
-            label="Возраст"
-            name="age"
-            rules={[{ required: true, message: 'Введите возраст' }]}
-          >
+          <Form.Item label="Возраст" name="age" rules={[{ required: true, message: 'Введите возраст' }]}>
             <InputNumber min={1} max={120} style={{ width: '100%' }} />
           </Form.Item>
-
           <Space>
-            <Button type="primary" htmlType="submit">
-              Сохранить
-            </Button>
+            <Button type="primary" htmlType="submit">Сохранить</Button>
             <Button onClick={() => setIsAddOpen(false)}>Отмена</Button>
           </Space>
         </Form>
@@ -231,34 +239,17 @@ export default function StudentsPage() {
         destroyOnClose
       >
         <Form form={editForm} layout="vertical" onFinish={onEditFinish}>
-          <Form.Item
-            label="Имя"
-            name="firstName"
-            rules={[{ required: true, message: 'Введите имя' }]}
-          >
+          <Form.Item label="Имя" name="firstName" rules={[{ required: true, message: 'Введите имя' }]}>
             <Input />
           </Form.Item>
-
-          <Form.Item
-            label="Фамилия"
-            name="lastName"
-            rules={[{ required: true, message: 'Введите фамилию' }]}
-          >
+          <Form.Item label="Фамилия" name="lastName" rules={[{ required: true, message: 'Введите фамилию' }]}>
             <Input />
           </Form.Item>
-
-          <Form.Item
-            label="Возраст"
-            name="age"
-            rules={[{ required: true, message: 'Введите возраст' }]}
-          >
+          <Form.Item label="Возраст" name="age" rules={[{ required: true, message: 'Введите возраст' }]}>
             <InputNumber min={1} max={120} style={{ width: '100%' }} />
           </Form.Item>
-
           <Space>
-            <Button type="primary" htmlType="submit">
-              Сохранить
-            </Button>
+            <Button type="primary" htmlType="submit">Сохранить</Button>
             <Button onClick={() => setIsEditOpen(false)}>Отмена</Button>
           </Space>
         </Form>
