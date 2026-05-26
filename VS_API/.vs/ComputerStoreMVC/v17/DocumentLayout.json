@@ -1,0 +1,297 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\VSCodeProject\\VS_API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\ComputerStoreMVC.csproj|d:\\urfu\\\u043C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\web\\web\\computerstoremvc_net8\\computerstoremvc\\controllers\\api\\studentsapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|ComputerStoreMVC\\ComputerStoreMVC.csproj|d:\\urfu\\\u043C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\web\\web\\computerstoremvc_net8\\computerstoremvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|ComputerStoreMVC\\ComputerStoreMVC.csproj|d:\\urfu\\\u043C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\web\\web\\computerstoremvc_net8\\computerstoremvc\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\ComputerStoreMVC.csproj|d:\\urfu\\\u043C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\web\\web\\computerstoremvc_net8\\computerstoremvc\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|ComputerStoreMVC\\ComputerStoreMVC.csproj|d:\\urfu\\\u043C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\web\\web\\computerstoremvc_net8\\computerstoremvc\\models\\computer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|ComputerStoreMVC\\ComputerStoreMVC.csproj|d:\\urfu\\\u043C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\web\\web\\computerstoremvc_net8\\computerstoremvc\\controllers\\computercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|ComputerStoreMVC\\ComputerStoreMVC.csproj|d:\\urfu\\\u043C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\web\\web\\computerstoremvc_net8\\computerstoremvc\\controllers\\api\\computersapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|ComputerStoreMVC\\ComputerStoreMVC.csproj|d:\\urfu\\\u043C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\web\\web\\computerstoremvc_net8\\computerstoremvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|ComputerStoreMVC\\ComputerStoreMVC.csproj|d:\\urfu\\\u043C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\web\\web\\computerstoremvc_net8\\computerstoremvc\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|ComputerStoreMVC\\ComputerStoreMVC.csproj|d:\\urfu\\\u043C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\web\\web\\computerstoremvc_net8\\computerstoremvc\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|ComputerStoreMVC\\ComputerStoreMVC.csproj|d:\\urfu\\\u043C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\web\\web\\computerstoremvc_net8\\computerstoremvc\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|ComputerStoreMVC\\ComputerStoreMVC.csproj|d:\\urfu\\\u043C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\web\\web\\computerstoremvc_net8\\computerstoremvc\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|ComputerStoreMVC\\ComputerStoreMVC.csproj|d:\\urfu\\\u043C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\web\\web\\computerstoremvc_net8\\computerstoremvc\\views\\computer\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|ComputerStoreMVC\\ComputerStoreMVC.csproj|d:\\urfu\\\u043C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\web\\web\\computerstoremvc_net8\\computerstoremvc\\views\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|ComputerStoreMVC\\ComputerStoreMVC.csproj|d:\\urfu\\\u043C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\web\\web\\computerstoremvc_net8\\computerstoremvc\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|ComputerStoreMVC\\ComputerStoreMVC.csproj|d:\\urfu\\\u043C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\web\\web\\computerstoremvc_net8\\computerstoremvc\\views\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|ComputerStoreMVC\\ComputerStoreMVC.csproj|d:\\urfu\\\u043C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\web\\web\\computerstoremvc_net8\\computerstoremvc\\views\\computer\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11111111-1111-1111-1111-111111111111}|ComputerStoreMVC\\ComputerStoreMVC.csproj|d:\\urfu\\\u043C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\web\\web\\computerstoremvc_net8\\computerstoremvc\\views\\computer\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StudentsApiController.cs",
+              "DocumentMoniker": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Controllers\\Api\\StudentsApiController.cs",
+              "RelativeDocumentMoniker": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Controllers\\Api\\StudentsApiController.cs",
+              "ToolTip": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Controllers\\Api\\StudentsApiController.cs",
+              "RelativeToolTip": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Controllers\\Api\\StudentsApiController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAywB4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T16:51:09.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Student.cs",
+              "DocumentMoniker": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Models\\Student.cs",
+              "RelativeDocumentMoniker": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Models\\Student.cs",
+              "ToolTip": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Models\\Student.cs",
+              "RelativeToolTip": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Models\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T16:49:55.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAcwGEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T10:12:00.715Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\_ViewImports.cshtml",
+              "ToolTip": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-11T17:12:31.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\Index.cshtml",
+              "ToolTip": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\Index.cshtml",
+              "RelativeToolTip": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\Index.cshtml",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAEAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-11T17:07:50.293Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAADMAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-11T17:05:29.245Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ComputersApiController.cs",
+              "DocumentMoniker": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Controllers\\Api\\ComputersApiController.cs",
+              "RelativeDocumentMoniker": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Controllers\\Api\\ComputersApiController.cs",
+              "ToolTip": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Controllers\\Api\\ComputersApiController.cs",
+              "RelativeToolTip": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Controllers\\Api\\ComputersApiController.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAowF0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-11T16:47:20.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Program.cs",
+              "RelativeDocumentMoniker": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Program.cs",
+              "ToolTip": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Program.cs",
+              "RelativeToolTip": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Program.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAwwEUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-11T16:42:36.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ComputerController.cs",
+              "DocumentMoniker": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Controllers\\ComputerController.cs",
+              "RelativeDocumentMoniker": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Controllers\\ComputerController.cs",
+              "ToolTip": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Controllers\\ComputerController.cs",
+              "RelativeToolTip": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Controllers\\ComputerController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAywDoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-11T14:14:19.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Data\\AppDbContext.cs",
+              "ToolTip": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-11T14:14:05.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\Account\\Login.cshtml",
+              "ToolTip": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-12T10:14:41.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Computer.cs",
+              "DocumentMoniker": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Models\\Computer.cs",
+              "RelativeDocumentMoniker": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Models\\Computer.cs",
+              "ToolTip": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Models\\Computer.cs",
+              "RelativeToolTip": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Models\\Computer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-11T14:13:41.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\Account\\Register.cshtml",
+              "ToolTip": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-12T10:13:47.455Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\_ViewStart.cshtml",
+              "ToolTip": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-12T10:50:59.228Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\Computer\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\Computer\\Index.cshtml",
+              "ToolTip": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\Computer\\Index.cshtml",
+              "RelativeToolTip": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\Computer\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-11T14:12:04.513Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\Create.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\Create.cshtml",
+              "ToolTip": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\Create.cshtml",
+              "RelativeToolTip": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-11T17:11:59.061Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\Computer\\Edit.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\Computer\\Edit.cshtml",
+              "ToolTip": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\Computer\\Edit.cshtml",
+              "RelativeToolTip": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\Computer\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-11T14:12:03.159Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\Computer\\Create.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\Computer\\Create.cshtml",
+              "ToolTip": "D:\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\Computer\\Create.cshtml",
+              "RelativeToolTip": "..\\..\\UrFU\\\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430\\github\\WEB\\WEB\\ComputerStoreMVC_NET8\\ComputerStoreMVC\\Views\\Computer\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-11T14:12:02.035Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

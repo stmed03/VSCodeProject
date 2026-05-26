@@ -1,4 +1,4 @@
-import { defineConfig } from 'umi';
+import { defineConfig } from '@umijs/max';
 
 export default defineConfig({
   routes: [
@@ -8,5 +8,5 @@ export default defineConfig({
     { path: '/students', component: 'students' },
   ],
   npmClient: 'npm',
-  utoopack: {},
+  request: {},
 });

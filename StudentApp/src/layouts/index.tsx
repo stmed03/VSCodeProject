@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Outlet, useLocation } from 'umi';
+import { Link, Outlet, useLocation } from '@umijs/max';
 import { Layout, Menu, Typography } from 'antd';
 
 const { Footer, Sider, Content } = Layout;
@@ -39,17 +39,14 @@ export default function LayoutPage() {
               padding: 20,
             }}
           >
-            <div
-              style={{
-                height: '100%',
-                display: 'flex',
-                flexDirection: 'column',
-              }}
-            >
+            <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
               <div style={{ marginBottom: 28 }}>
                 <Title level={3} style={{ color: '#fff', margin: 0 }}>
-                  Создание web-сервисов с использованием современных программных средств
+                  Практические работы
                 </Title>
+                <Text style={{ color: 'rgba(255,255,255,0.85)' }}>
+                  Клиентская часть приложения
+                </Text>
               </div>
 
               <Menu
