@@ -46,9 +46,9 @@ export function createStudent(values: StudentFormValues) {
 }
 
 export function updateStudent(id: number, values: StudentFormValues) {
-  return request<Student>(`${API_BASE}/${id}`, {
+  return request<void>(`${API_BASE}/${id}`, {
     method: 'PUT',
-    body: JSON.stringify(values),
+    body: JSON.stringify({ id, ...values }),
   });
 }
 

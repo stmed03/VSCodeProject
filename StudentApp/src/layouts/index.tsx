@@ -42,8 +42,11 @@ export default function LayoutPage() {
             <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
               <div style={{ marginBottom: 28 }}>
                 <Title level={3} style={{ color: '#fff', margin: 0 }}>
-                  Практическая работа №6
+                  Практические работы
                 </Title>
+                <Text style={{ color: 'rgba(255,255,255,0.85)' }}>
+                  Клиентская часть приложения
+                </Text>
               </div>
 
               <Menu

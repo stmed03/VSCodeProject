@@ -1,7 +1,7 @@
 const TOKEN_KEY = 'token';
 
 export const request = {
-  prefix: 'https://localhost:60974',
+  prefix: 'http://server:8080',
   requestInterceptors: [
     (config: any) => {
       const token = localStorage.getItem(TOKEN_KEY);

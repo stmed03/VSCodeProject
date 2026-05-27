@@ -55,45 +55,8 @@ export default function StudentsPage() {
   const filteredStudents = useMemo(() => {
     const q = search.trim().toLowerCase();
     if (!q) return students;
-    return students.filter((s) =>
-      `${s.firstName} ${s.lastName}`.toLowerCase().includes(q),
-    );
+    return students.filter((s) => `${s.firstName} ${s.lastName}`.toLowerCase().includes(q));
   }, [students, search]);
-
-  const ageChartData = useMemo(() => {
-    const map = filteredStudents.reduce<Record<string, number>>((acc, s) => {
-      const key = String(s.age);
-      acc[key] = (acc[key] || 0) + 1;
-      return acc;
-    }, {});
-    return Object.entries(map)
-      .map(([age, value]) => ({ age, value }))
-      .sort((a, b) => Number(a.age) - Number(b.age));
-  }, [filteredStudents]);
-
-  const chartMax = Math.max(1, ...ageChartData.map((x) => x.value));
-
-  const exportCsv = () => {
-    if (!filteredStudents.length) {
-      message.warning('Нет данных для экспорта');
-      return;
-    }
-
-    const headers = ['Имя', 'Фамилия', 'Возраст'];
-    const rows = filteredStudents.map((s) => [s.firstName, s.lastName, String(s.age)]);
-    const csv = [headers, ...rows]
-      .map((row) => row.map((v) => `"${String(v).replaceAll('"', '""')}"`).join(';'))
-      .join('\n');
-
-    const blob = new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8;' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'students.csv';
-    a.click();
-    URL.revokeObjectURL(url);
-    message.success('Файл экспортирован');
-  };
 
   const onAddFinish = async (values: StudentFormValues) => {
     try {
@@ -158,7 +121,7 @@ export default function StudentsPage() {
   const logout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem(USER_KEY);
-    window.location.href = '/login';
+    window.location.replace('/login');
   };
 
   const columns = [
@@ -218,51 +181,14 @@ export default function StudentsPage() {
               }}
             />
             <Space>
-              <Button onClick={exportCsv}>Экспорт в Excel</Button>
+              <Button onClick={() => message.info('Экспорт в этой минимальной версии временно не используется')}>
+                Экспорт
+              </Button>
               <Button type="primary" onClick={() => setIsAddOpen(true)}>
                 Добавить студента
               </Button>
             </Space>
           </Space>
-
-          <Card title="График по возрастам" size="small">
-            {ageChartData.length ? (
-              <div
-                style={{
-                  display: 'flex',
-                  alignItems: 'flex-end',
-                  gap: 16,
-                  minHeight: 260,
-                  padding: '12px 8px 8px',
-                  overflowX: 'auto',
-                }}
-              >
-                {ageChartData.map((item) => {
-                  const height = Math.max(20, Math.round((item.value / chartMax) * 180));
-                  return (
-                    <div key={item.age} style={{ width: 60, textAlign: 'center' }}>
-                      <div style={{ height: 24, fontSize: 14, marginBottom: 6 }}>
-                        {item.value}
-                      </div>
-                      <div
-                        title={`Возраст ${item.age}: ${item.value}`}
-                        style={{
-                          height,
-                          background: '#1677ff',
-                          borderRadius: '8px 8px 0 0',
-                        }}
-                      />
-                      <div style={{ marginTop: 8, fontSize: 12, color: '#666' }}>
-                        {item.age}
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            ) : (
-              <Empty description="Нет данных для графика" />
-            )}
-          </Card>
 
           <Table
             loading={loading}
@@ -299,7 +225,9 @@ export default function StudentsPage() {
             <InputNumber min={1} max={120} style={{ width: '100%' }} />
           </Form.Item>
           <Space>
-            <Button type="primary" htmlType="submit">Сохранить</Button>
+            <Button type="primary" htmlType="submit">
+              Сохранить
+            </Button>
             <Button onClick={() => setIsAddOpen(false)}>Отмена</Button>
           </Space>
         </Form>
@@ -323,7 +251,9 @@ export default function StudentsPage() {
             <InputNumber min={1} max={120} style={{ width: '100%' }} />
           </Form.Item>
           <Space>
-            <Button type="primary" htmlType="submit">Сохранить</Button>
+            <Button type="primary" htmlType="submit">
+              Сохранить
+            </Button>
             <Button onClick={() => setIsEditOpen(false)}>Отмена</Button>
           </Space>
         </Form>

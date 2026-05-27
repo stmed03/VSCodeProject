@@ -25,7 +25,7 @@ export default function DocsPage() {
           </Title>
 
           <Paragraph style={{ fontSize: 16, marginBottom: 0, maxWidth: 720 }}>
-            Нажми на кнопку ниже, чтобы открыть фотографию разработчика.
+            Нажми на кнопку ниже, чтобы открыть фотографию в отдельном окне.
           </Paragraph>
 
           <Button type="primary" size="large" onClick={() => setIsOpen(true)}>
