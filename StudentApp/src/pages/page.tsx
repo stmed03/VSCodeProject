@@ -36,16 +36,11 @@ export default function Page() {
           </Title>
 
           <Paragraph style={{ fontSize: 16, marginBottom: 0, maxWidth: 720 }}>
-            Заполни форму ниже, чтобы отправить сообщение. После отправки появится всплывающее
-            окно с введёнными данными.
+            Заполни форму ниже, чтобы отправить сообщение. После отправки появится всплывающее окно.
           </Paragraph>
 
           <Form form={form} layout="vertical" onFinish={onFinish} autoComplete="off">
-            <Form.Item
-              label="Имя"
-              name="name"
-              rules={[{ required: true, message: 'Введите имя' }]}
-            >
+            <Form.Item label="Имя" name="name" rules={[{ required: true, message: 'Введите имя' }]}>
               <Input size="large" placeholder="Введите ваше имя" />
             </Form.Item>
 
@@ -93,7 +88,6 @@ export default function Page() {
             justifyContent: 'center',
             zIndex: 3000,
             padding: 16,
-            backdropFilter: 'blur(4px)',
           }}
         >
           <div
@@ -103,7 +97,6 @@ export default function Page() {
               background: '#fff',
               borderRadius: 20,
               padding: 24,
-              boxShadow: '0 24px 80px rgba(0,0,0,0.25)',
             }}
           >
             <Title level={4} style={{ marginTop: 0 }}>

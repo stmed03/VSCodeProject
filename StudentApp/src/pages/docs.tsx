@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button, Card, Space, Typography } from 'antd';
+import { Button, Card, Modal, Space, Typography } from 'antd';
 
 const { Title, Paragraph } = Typography;
 
@@ -24,7 +24,9 @@ export default function DocsPage() {
             О программе
           </Title>
 
-          
+          <Paragraph style={{ fontSize: 16, marginBottom: 0, maxWidth: 720 }}>
+            Нажми на кнопку ниже, чтобы открыть фотографию разработчика.
+          </Paragraph>
 
           <Button type="primary" size="large" onClick={() => setIsOpen(true)}>
             Показать фото
@@ -32,52 +34,24 @@ export default function DocsPage() {
         </Space>
       </Card>
 
-      {isOpen && (
-        <div
+      <Modal
+        open={isOpen}
+        onCancel={() => setIsOpen(false)}
+        footer={null}
+        centered
+        width={600}
+        title="Фотография"
+      >
+        <img
+          src={imageUrl}
+          alt="Фото"
           style={{
-            position: 'fixed',
-            inset: 0,
-            background: 'rgba(15, 23, 42, 0.55)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            zIndex: 3000,
-            padding: 16,
-            backdropFilter: 'blur(4px)',
+            width: '100%',
+            display: 'block',
+            borderRadius: 14,
           }}
-        >
-          <div
-            style={{
-              width: '100%',
-              maxWidth: 560,
-              background: '#fff',
-              borderRadius: 20,
-              padding: 24,
-              boxShadow: '0 24px 80px rgba(0,0,0,0.25)',
-            }}
-          >
-            <Title level={4} style={{ marginTop: 0 }}>
-              Фотография
-            </Title>
-
-            <img
-              src={imageUrl}
-              alt="Фото"
-              style={{
-                width: '100%',
-                display: 'block',
-                borderRadius: 14,
-              }}
-            />
-
-            <div style={{ marginTop: 24, textAlign: 'right' }}>
-              <Button type="primary" onClick={() => setIsOpen(false)}>
-                OK
-              </Button>
-            </div>
-          </div>
-        </div>
-      )}
+        />
+      </Modal>
     </div>
   );
 }

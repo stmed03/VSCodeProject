@@ -1,5 +1,4 @@
-import React from 'react';
-import { Link, Outlet, useLocation } from '@umijs/max';
+import { Link, Outlet, useLocation } from 'react-router-dom';
 import { Layout, Menu, Typography } from 'antd';
 
 const { Footer, Sider, Content } = Layout;
@@ -16,7 +15,8 @@ export default function LayoutPage() {
     { key: '/students', label: <Link to="/students">Список студентов</Link> },
   ];
 
-  const selectedKey = items.find((item) => item.key === location.pathname)?.key || '/';
+  const selectedKey =
+    items.find((item) => item.key === location.pathname)?.key || '/';
 
   return (
     <Layout style={{ minHeight: '100vh', background: '#f5f7fb' }}>
@@ -42,11 +42,8 @@ export default function LayoutPage() {
             <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
               <div style={{ marginBottom: 28 }}>
                 <Title level={3} style={{ color: '#fff', margin: 0 }}>
-                  Практические работы
+                  Практическая работа №6
                 </Title>
-                <Text style={{ color: 'rgba(255,255,255,0.85)' }}>
-                  Клиентская часть приложения
-                </Text>
               </div>
 
               <Menu

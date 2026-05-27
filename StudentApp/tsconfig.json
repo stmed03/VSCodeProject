@@ -1,3 +1,25 @@
 {
-  "extends": "./src/.umi/tsconfig.json"
+  "compilerOptions": {
+    "target": "ES2015",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "ignoreDeprecations": "6.0"
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "config/**/*.ts", ".umirc.ts", "src/access.ts.bak"],
+  "exclude": ["node_modules", "dist", "src/.umi"]
 }

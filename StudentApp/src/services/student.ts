@@ -1,5 +1,3 @@
-import http from './http';
-
 export type Student = {
   id: number;
   firstName: string;
@@ -13,27 +11,49 @@ export type StudentFormValues = {
   age: number;
 };
 
-export function getStudents(search?: string) {
-  const query = search ? `?search=${encodeURIComponent(search)}` : '';
-  return http<Student[]>(`/api/StudentsApi${query}`);
+const API_BASE = 'https://localhost:60974/api/StudentsApi';
+
+async function request<T>(url: string, options?: RequestInit): Promise<T> {
+  const token = localStorage.getItem('token');
+
+  const res = await fetch(url, {
+    ...options,
+    headers: {
+      'Content-Type': 'application/json',
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+      ...(options?.headers ?? {}),
+    },
+  });
+
+  if (!res.ok) {
+    throw new Error(`HTTP ${res.status}`);
+  }
+
+  return res.status === 204 ? (null as T) : ((await res.json()) as T);
 }
 
-export function createStudent(data: StudentFormValues) {
-  return http<Student>(`/api/StudentsApi`, {
+export function getStudents(search = '') {
+  const url = new URL(API_BASE);
+  if (search.trim()) url.searchParams.set('search', search.trim());
+  return request<Student[]>(url.toString());
+}
+
+export function createStudent(values: StudentFormValues) {
+  return request<Student>(API_BASE, {
     method: 'POST',
-    body: JSON.stringify(data),
+    body: JSON.stringify(values),
   });
 }
 
-export function updateStudent(id: number, data: StudentFormValues) {
-  return http<void>(`/api/StudentsApi/${id}`, {
+export function updateStudent(id: number, values: StudentFormValues) {
+  return request<Student>(`${API_BASE}/${id}`, {
     method: 'PUT',
-    body: JSON.stringify({ id, ...data }),
+    body: JSON.stringify(values),
   });
 }
 
 export function deleteStudent(id: number) {
-  return http<void>(`/api/StudentsApi/${id}`, {
+  return request<void>(`${API_BASE}/${id}`, {
     method: 'DELETE',
   });
 }

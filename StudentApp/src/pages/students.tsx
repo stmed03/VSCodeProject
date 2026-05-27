@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from 'react';
-import { history } from '@umijs/max';
 import {
   Button,
   Card,
@@ -32,7 +31,6 @@ export default function StudentsPage() {
 
   const [students, setStudents] = useState<Student[]>([]);
   const [loading, setLoading] = useState(false);
-  const [count, setCount] = useState(0);
   const [search, setSearch] = useState('');
   const [isAddOpen, setIsAddOpen] = useState(false);
   const [isEditOpen, setIsEditOpen] = useState(false);
@@ -54,9 +52,48 @@ export default function StudentsPage() {
     loadStudents();
   }, []);
 
-  useEffect(() => {
-    setCount(students.length);
-  }, [students]);
+  const filteredStudents = useMemo(() => {
+    const q = search.trim().toLowerCase();
+    if (!q) return students;
+    return students.filter((s) =>
+      `${s.firstName} ${s.lastName}`.toLowerCase().includes(q),
+    );
+  }, [students, search]);
+
+  const ageChartData = useMemo(() => {
+    const map = filteredStudents.reduce<Record<string, number>>((acc, s) => {
+      const key = String(s.age);
+      acc[key] = (acc[key] || 0) + 1;
+      return acc;
+    }, {});
+    return Object.entries(map)
+      .map(([age, value]) => ({ age, value }))
+      .sort((a, b) => Number(a.age) - Number(b.age));
+  }, [filteredStudents]);
+
+  const chartMax = Math.max(1, ...ageChartData.map((x) => x.value));
+
+  const exportCsv = () => {
+    if (!filteredStudents.length) {
+      message.warning('Нет данных для экспорта');
+      return;
+    }
+
+    const headers = ['Имя', 'Фамилия', 'Возраст'];
+    const rows = filteredStudents.map((s) => [s.firstName, s.lastName, String(s.age)]);
+    const csv = [headers, ...rows]
+      .map((row) => row.map((v) => `"${String(v).replaceAll('"', '""')}"`).join(';'))
+      .join('\n');
+
+    const blob = new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'students.csv';
+    a.click();
+    URL.revokeObjectURL(url);
+    message.success('Файл экспортирован');
+  };
 
   const onAddFinish = async (values: StudentFormValues) => {
     try {
@@ -121,35 +158,32 @@ export default function StudentsPage() {
   const logout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem(USER_KEY);
-    history.push('/login');
+    window.location.href = '/login';
   };
 
-  const columns = useMemo(
-    () => [
-      { title: '№', dataIndex: 'id', key: 'id', width: 80, align: 'center' as const },
-      { title: 'Имя', dataIndex: 'firstName', key: 'firstName' },
-      { title: 'Фамилия', dataIndex: 'lastName', key: 'lastName' },
-      { title: 'Возраст', dataIndex: 'age', key: 'age', width: 110, align: 'center' as const },
-      {
-        title: 'Действие',
-        key: 'actions',
-        width: 240,
-        align: 'center' as const,
-        render: (_: unknown, record: Student) => (
-          <Space>
-            <Button onClick={() => openEdit(record)}>Редактировать</Button>
-            <Button danger icon={<DeleteOutlined />} onClick={() => handleDelete(record.id)}>
-              Удалить
-            </Button>
-          </Space>
-        ),
-      },
-    ],
-    [],
-  );
+  const columns = [
+    { title: '№', dataIndex: 'id', key: 'id', width: 80, align: 'center' as const },
+    { title: 'Имя', dataIndex: 'firstName', key: 'firstName' },
+    { title: 'Фамилия', dataIndex: 'lastName', key: 'lastName' },
+    { title: 'Возраст', dataIndex: 'age', key: 'age', width: 110, align: 'center' as const },
+    {
+      title: 'Действие',
+      key: 'actions',
+      width: 240,
+      align: 'center' as const,
+      render: (_: unknown, record: Student) => (
+        <Space>
+          <Button onClick={() => openEdit(record)}>Редактировать</Button>
+          <Button danger icon={<DeleteOutlined />} onClick={() => handleDelete(record.id)}>
+            Удалить
+          </Button>
+        </Space>
+      ),
+    },
+  ];
 
   const isSearchActive = search.trim().length > 0;
-  const isEmptyAfterSearch = isSearchActive && students.length === 0;
+  const isEmptyAfterSearch = isSearchActive && filteredStudents.length === 0;
 
   return (
     <div style={{ maxWidth: 1100 }}>
@@ -169,8 +203,6 @@ export default function StudentsPage() {
             <Text type="secondary">
               Авторизован как: {localStorage.getItem(USER_KEY) ?? 'неизвестно'}
             </Text>
-            <br />
-            <Text type="secondary">Количество студентов: {count}</Text>
           </div>
 
           <Space wrap style={{ width: '100%', justifyContent: 'space-between' }}>
@@ -185,15 +217,57 @@ export default function StudentsPage() {
                 if (!value) handleSearch('');
               }}
             />
-            <Button type="primary" onClick={() => setIsAddOpen(true)}>
-              Добавить студента
-            </Button>
+            <Space>
+              <Button onClick={exportCsv}>Экспорт в Excel</Button>
+              <Button type="primary" onClick={() => setIsAddOpen(true)}>
+                Добавить студента
+              </Button>
+            </Space>
           </Space>
+
+          <Card title="График по возрастам" size="small">
+            {ageChartData.length ? (
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'flex-end',
+                  gap: 16,
+                  minHeight: 260,
+                  padding: '12px 8px 8px',
+                  overflowX: 'auto',
+                }}
+              >
+                {ageChartData.map((item) => {
+                  const height = Math.max(20, Math.round((item.value / chartMax) * 180));
+                  return (
+                    <div key={item.age} style={{ width: 60, textAlign: 'center' }}>
+                      <div style={{ height: 24, fontSize: 14, marginBottom: 6 }}>
+                        {item.value}
+                      </div>
+                      <div
+                        title={`Возраст ${item.age}: ${item.value}`}
+                        style={{
+                          height,
+                          background: '#1677ff',
+                          borderRadius: '8px 8px 0 0',
+                        }}
+                      />
+                      <div style={{ marginTop: 8, fontSize: 12, color: '#666' }}>
+                        {item.age}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            ) : (
+              <Empty description="Нет данных для графика" />
+            )}
+          </Card>
 
           <Table
             loading={loading}
             columns={columns}
-            dataSource={students}
+            dataSource={filteredStudents}
             rowKey="id"
             pagination={{ pageSize: 5 }}
             locale={{
