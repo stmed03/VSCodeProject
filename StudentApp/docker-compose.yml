@@ -1,18 +1,16 @@
 services:
+  client:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: studentapp-client
+    ports:
+      - "3000:80"
+
   server:
     build:
       context: ./server
       dockerfile: Dockerfile
-    container_name: server
+    image: studentapp-server
     ports:
-      - "8080:8080"
-
-  client:
-    build:
-      context: ./client
-      dockerfile: Dockerfile
-    container_name: client
-    ports:
-      - "3000:80"
-    depends_on:
-      - server
+      - "5000:8080"
